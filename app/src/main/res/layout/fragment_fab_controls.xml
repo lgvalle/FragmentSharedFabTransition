@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <View
+        android:layout_width="match_parent"
+        android:id="@+id/separator"
+        android:background="@android:color/holo_red_light"
+        android:layout_height="20dp" />
+
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/controls_layout"
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/empty_header"
+        android:background="@color/material_blue_grey_800"
+        android:layout_height="150dp"
+        android:layout_toEndOf="@+id/pause_button"
+        android:layout_alignParentStart="true">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:id="@+id/rew_button"
+            android:scaleX="0"
+            android:scaleY="0"
+            android:layout_gravity="center_vertical"
+            android:backgroundTint="@color/material_blue_grey_800"
+            android:src="@android:drawable/ic_media_rew"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/ff_button"
+            android:layout_alignParentStart="true" />
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:id="@+id/ff_button"
+            android:scaleX="0"
+            android:scaleY="0"
+            android:layout_gravity="center_vertical"
+            android:backgroundTint="@color/material_blue_grey_800"
+            android:src="@android:drawable/ic_media_ff"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true" />
+
+    </RelativeLayout>
+
+
+    <ImageButton
+        android:id="@+id/pause_button"
+        android:background="@drawable/round_bg"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:transitionName="pause_button"
+        android:src="@android:drawable/ic_media_pause"
+        android:layout_below="@+id/separator"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp" />
+</RelativeLayout>
+
+

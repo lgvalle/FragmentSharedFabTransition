@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scene_root"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <View
+        android:layout_width="match_parent"
+        android:id="@+id/empty_header"
+        android:background="@android:color/holo_red_light"
+        android:layout_height="250dp" />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:id="@+id/frag_content"
+        android:layout_below="@id/empty_header"
+        android:layout_height="150dp" />
+
+
+</RelativeLayout>

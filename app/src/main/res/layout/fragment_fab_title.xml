@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_red_light"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="20dp"
+        android:id="@+id/title_layout"
+
+        android:background="@color/material_blue_grey_800"
+        android:layout_height="150dp">
+
+        <TextView
+            android:layout_centerInParent="true"
+            android:id="@+id/section_title"
+            android:visibility="invisible"
+            android:layout_width="match_parent"
+            android:gravity="center_horizontal|center_vertical"
+            style="@style/Base.TextAppearance.AppCompat.Display1"
+            android:textColor="?android:colorAccent"
+            android:text="This is a Title"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:visibility="invisible"
+            android:layout_centerInParent="true"
+            android:layout_below="@+id/section_title"
+            android:layout_width="match_parent"
+            android:gravity="center_horizontal|center_vertical"
+            style="@style/Base.TextAppearance.AppCompat.Headline"
+            android:textColor="?android:colorAccent"
+            android:text="with a subtitle"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <ImageButton
+        android:id="@+id/fab"
+        style="@style/FloatingActionButton"
+        android:layout_width="48dp"
+
+        android:layout_height="48dp"
+        android:transitionName="pause_button"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="16dp"
+        android:src="@android:drawable/ic_media_next" />
+</RelativeLayout>
