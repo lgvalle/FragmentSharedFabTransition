@@ -5,6 +5,7 @@ import android.app.Fragment;
 import android.os.Bundle;
 import android.support.v4.view.ViewCompat;
 import android.support.v7.app.ActionBarActivity;
+import android.transition.Fade;
 import android.transition.Transition;
 import android.transition.TransitionInflater;
 import android.view.LayoutInflater;
@@ -41,10 +42,14 @@ public class FabActivity extends ActionBarActivity {
                     final ControlsFragment controlsFragment = ControlsFragment.newInstance();
 
                     setupSharedElementTransition(controlsFragment);
+                    Fade f = new Fade();
+                    f.setStartDelay(250);
+                    setExitTransition(f);
 
                     getFragmentManager()
                             .beginTransaction()
                             .replace(R.id.frag_content, controlsFragment)
+                            .addToBackStack("controls")
                             .addSharedElement(fabbutton, "pause_button")
                             .commit();
                 }
